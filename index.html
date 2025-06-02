@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Üzr istəyirəm, Aytən 😔</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding-top: 50px;
+    }
+    #sayori {
+      width: 200px;
+      cursor: grab;
+      transition: transform 0.8s ease;
+    }
+    #trash {
+      width: 150px;
+      margin-top: 30px;
+    }
+    #message {
+      display: none;
+      margin-top: 40px;
+      font-size: 24px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Aytən, bax Sayorini zibilə atıram</h1>
+  <p>(Ama sənə olan hörmətim sonsuzdu)</p>
+
+  <!-- Sayori şəkli -->
+  <img id="sayori" src="https://static.wikia.nocookie.net/doki-doki-literature-club/images/5/50/Sayori_CG_Happy.png" alt="Sayori">
+  
+  <!-- Zibil qutusu -->
+  <div>
+    <img id="trash" src="https://cdn-icons-png.flaticon.com/512/565/565313.png" alt="Trash Bin">
+  </div>
+
+  <!-- Üzr mesajı -->
+  <div id="message">
+    ❤ Aytən, sənsiz hər şey mənasızdı. O status sadəcə oyundu, amma sən gerçəksən. Bağışla məni. ❤
+  </div>
+
+  <!-- Mahnı (audio) -->
+  <audio autoplay loop>
+    <source src="cant_stop_feeling_you.mp3" type="audio/mpeg">
+    Sənin brauzerin audio dəstəkləmir.
+  </audio>
+
+  <script>
+    const sayori = document.getElementById('sayori');
+    const trash = document.getElementById('trash');
+    const message = document.getElementById('message');
+
+    sayori.addEventListener('click', () => {
+      sayori.style.transform = 'translateY(1000px)';
+      setTimeout(() => {
+        sayori.style.display = 'none';
+        message.style.display = 'block';
+      }, 800);
+    });
+  </script>
+
+</body>
+</html>
